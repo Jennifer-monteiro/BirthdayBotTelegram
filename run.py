@@ -30,11 +30,11 @@ def send_reminders(context):
 
     for name, birthday in birthdays.items():
         if birthday == today_formatted:
-            context.bot.send_message(chat_id='1001680856159', text=f"🎉🎂 HOJE É ANIVERSÁRIO DA {name}! PARABÉNS!! 🎂🎉")
+            context.bot.send_message(chat_id='', text=f"🎉🎂 HOJE É ANIVERSÁRIO DA {name}! PARABÉNS!! 🎂🎉")
 
 
 def main():
-    updater = Updater('6988651596:AAFXlQ0rK3eXZGUVNU8jVDK71N4xYPuVbYk', use_context=True)
+    updater = Updater('', use_context=True)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
@@ -107,7 +107,7 @@ def send_reminders(context: CallbackContext):
     for name, birthday in birthdays.items():
         if birthday == today_formatted:
             try:
-                context.bot.send_message(chat_id='1001680856159', text=f"🎉🎂 HOJE É ANIVERSÁRIO DA {name}! PARABÉNS!! 🎂🎉")
+                context.bot.send_message(chat_id='', text=f"🎉🎂 HOJE É ANIVERSÁRIO DA {name}! PARABÉNS!! 🎂🎉")
             except Exception as e:
                 print(f"Error sending birthday message for {name}: {str(e)}")
 
@@ -117,7 +117,7 @@ def print_current_time(context: CallbackContext):
     print("Current time:", now.strftime("%H:%M:%S"))  # Debugging line
 
 def main():
-    updater = Updater('6988651596:AAFXlQ0rK3eXZGUVNU8jVDK71N4xYPuVbYk', use_context=True)
+    updater = Updater('', use_context=True)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
