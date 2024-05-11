@@ -1,0 +1,32 @@
+""" from telegram import Update
+from telegram.ext import Updater, CommandHandler, CallbackContext
+import datetime
+
+#Handler the start command
+
+def start(update,context):
+    update.message.reply_text("Hello! I am your bithday reminder bot. ")
+
+#ADD BIRTHDAY
+
+birthdays = {
+    "Lorena": "20-01",
+    "Jennifer": "25-01",
+    "Raissa": "27-01",
+    "Victoria": "03-03",
+    "Sue": "23-03",
+    "Gabi": "31-03",
+    "Chai": "01-04",
+    "Kese": "18-12"
+}
+
+def send_reminders(context):
+    today = datetime.date.today()
+    #Format day-month
+    today_formatted = today.strftime("%d-%m")
+
+    #check if a birthdfay match
+
+    for name, birthday in birthdays.items():
+        if birthday == today_formatted:
+            context.bot.send_message(chat_id='1001680856159', text=f"🎉🎂 HOJE É ANIVERSÁRIO DA {name}! PARABÉNS!! 🎂🎉") """
